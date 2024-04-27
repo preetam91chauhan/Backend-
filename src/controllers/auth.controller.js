@@ -47,6 +47,10 @@ const verifyEmail = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+const textArea = (req, res) => {
+  const { text } = req.body;
+};
+
 module.exports = {
   register,
   login,
@@ -56,4 +60,5 @@ module.exports = {
   resetPassword,
   sendVerificationEmail,
   verifyEmail,
+  textArea,
 };

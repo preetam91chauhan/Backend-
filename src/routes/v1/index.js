@@ -1,6 +1,11 @@
 const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
+const boardRoute = require('./board.route');
+const listRoute = require('./list.route');
+const taskRoute = require('./task.route');
+
+
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
@@ -14,6 +19,21 @@ const defaultRoutes = [
   {
     path: '/users',
     route: userRoute,
+  },
+  // route for board creation
+  {
+    path: '/board',
+    route: boardRoute,
+  },
+  // this is the route for the list creation
+  {
+    path: '/list',
+    route: taskRoute,
+  },
+  // this is the route for the task
+  {
+    path: '/task',
+    route: listRoute,
   },
 ];
 
